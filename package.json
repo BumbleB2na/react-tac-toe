@@ -2,7 +2,7 @@
   "name": "react-tac-toe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://bumbleb2na.github.io/react-tac-toe",
+  "homepage": "https://bumbleb2na.github.io/react-tac-toe",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
