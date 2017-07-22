@@ -1,5 +1,5 @@
 # react-tac-toe
-[Github page for README](http://bumbleb2na.github.io/react-tac-toe)
+[Github page for README](http://bumbleb2na.github.io/react-tac-toe)  
 [Demo on Heroku](https://react-tactoe.herokuapp.com/)
 
 ## Following Tutorial
