@@ -1,14 +1,12 @@
 # react-tac-toe
-[Demo](http://bumbleb2na.github.io/react-tac-toe)
+[Github page for README](http://bumbleb2na.github.io/react-tac-toe)
+[Demo on Heroku](https://react-tactoe.herokuapp.com/)
 
 ## Following Tutorial
-Am following the official React intro tutorial to create a tic-tac-toe web game: [Tutorial: Intro To React](https://facebook.github.io/react/tutorial/tutorial.html)  
-  
-Hosting [demo on github](http://bumbleb2na.github.io/react-tac-toe)
+Am following the official React intro tutorial to create a tic-tac-toe web game: [Tutorial: Intro To React](https://facebook.github.io/react/tutorial/tutorial.html) 
 
 ## create-react-app
-The starter kit for creating front-end react apps: [Installation: Creating a new application](https://facebook.github.io/react/docs/installation.html#creating-a-new-application)  
-  
+The starter kit for creating front-end react apps: [Installation: Creating a new application](https://facebook.github.io/react/docs/installation.html#creating-a-new-application)    
 "Create React App doesn't handle backend logic or databases; it just creates a frontend build pipeline, so you can use it with any backend you want. It uses build tools like Babel and webpack under the hood, but works with zero configuration."  
   
 ## Learnings
@@ -33,7 +31,9 @@ use key prop for iterator children:
 
 ## Version log
 NOTE: Log items explain how learnings were applied:  
-  
+
+v1.0: Major version ready for Deployment. Ideas for improvements finished. Used key prop for iterator children in custom code.
+
 v0.2: Game controls Board and Square states. Squares and Board are simple, pure components. Squares are still functional components. Board and Squares are controlled components. Game controls Board and states of Squares, storing said states in a history using immutability to optimize performance when undoing moves.  
   
 v0.1: Board controls Square states. Squares are simple, pure components. Squares are functional components. Squares are controlled components. Board controls states of Squares using immutability to optimize performance. Separation of concerns.  
