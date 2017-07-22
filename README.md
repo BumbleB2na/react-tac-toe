@@ -25,6 +25,8 @@ immutability is important:
 functional components:  
 "Many components in your apps will be able to be written as functional components: these components tend to be easier to write and React will optimize them more in the future."  
   
-## Learnings Applied
-Board controls Square states. Squares are simple, pure components. Squares are functional components. Squares are controlled components. Board controls states of Squares using immutability to optimize performance. Separation of concerns.  
+## Learnings Applied  
+v0.2: Game controls Board and Square states. Squares and Board are simple, pure components. Squares are still functional components. Board and Squares are controlled components. Game controls Board and states of Squares, storing said states in a history using immutability to optimize performance when undoing moves.  
+  
+v0.1: Board controls Square states. Squares are simple, pure components. Squares are functional components. Squares are controlled components. Board controls states of Squares using immutability to optimize performance. Separation of concerns.  
   
