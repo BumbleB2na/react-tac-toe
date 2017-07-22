@@ -48,22 +48,24 @@ class Game extends React.Component {
         } 
 
         return (
-            <h1>React-Tac-Toe</h1>
-            <div className="game">
-            <div className="game-board">
-                <Board 
-                    winningSquares={winningSquares} 
-                    squares={current.squares} 
-                    onClick={(i) => this.handleClick(i)}
-                />
-            </div>
-            <div className="game-info">
-                <div>{status}</div>
-                <ol reversed={!this.state.isAscending}>{moves}</ol>
-                Toggle order: <button onClick={() => this.handleToggleOrder()}>
-                    {(this.state.isAscending) ? 'descending' : 'ascending'}
-                </button>
-            </div>
+            <div>
+                <h1>React-Tac-Toe</h1>
+                <div className="game">
+                    <div className="game-board">
+                        <Board 
+                            winningSquares={winningSquares} 
+                            squares={current.squares} 
+                            onClick={(i) => this.handleClick(i)}
+                        />
+                    </div>
+                    <div className="game-info">
+                        <div>{status}</div>
+                        <ol reversed={!this.state.isAscending}>{moves}</ol>
+                        Toggle order: <button onClick={() => this.handleToggleOrder()}>
+                            {(this.state.isAscending) ? 'descending' : 'ascending'}
+                        </button>
+                    </div>
+                </div>
             </div>
         );
     }
