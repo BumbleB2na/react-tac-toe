@@ -38,3 +38,38 @@ v0.2: Game controls Board and Square states. Squares and Board are simple, pure 
   
 v0.1: Board controls Square states. Squares are simple, pure components. Squares are functional components. Squares are controlled components. Board controls states of Squares using immutability to optimize performance. Separation of concerns.  
   
+## More learnings
+More learnings from documentation:  
+  
+JSX Prevents Injection Attacks:  
+"It is safe to embed [potentially malicious] user input in JSX."  
+"By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that's not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent XSS (cross-site-scripting) attacks."  
+  
+Never modify props/input passed in to functional component or component class:  
+"React is pretty flexible but it has a single strict rule: All React components must act like pure functions with respect to their props."  
+"Whether you declare a component as a function or a class, it must never modify its own props."  
+  
+Use component state to modify inputs over time, without violating the rule of never modifying props:  
+"State allows React components to change their output over time in response to user actions, network responses, and anything else, without violating this rule."  
+  
+constructor(props) { super(props); this.state = {...}; }:  
+"Class components should always call the base constructor with props."  
+  
+free up resources by adding lifecycle methods to a class:  
+"In applications with many components, it's very important to free up resources taken by the components when they are destroyed."  
+  
+don't set state using current state value + prop value - solution: pass function to setState method with preious state and props to calculate value that combines state + prop value:  
+"React may batch multiple setState() calls into a single update for performance. Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state."  
+"To fix it, use a second form of setState() that accepts a function rather than an object. That function will receive the previous state as the first argument, and the props at the time the update is applied as the second argument:"  
+  
+setState merges input object with state object and it is a shallow merge:  
+"The merging is shallow, so this.setState({comments}) leaves this.state.posts intact, but completely replaces this.state.comments."  
+  
+data flows down to child components - ie: top-down/unidirectional:  
+"Neither parent nor child components can know if a certain component is stateful or stateless, and they shouldn't care whether it is defined as a function or a class. This is why state is often called local or encapsulated. It is not accessible to any component other than the one that owns and sets it."  
+"In React apps, whether a component is stateful or stateless is considered an implementation detail of the component that may change over time. You can use stateless components inside stateful components, and vice versa."  
+  
+keep component states in sync by lifting state up to nearest parent/ancestor:  
+"In React, sharing state is accomplished by moving it up to the closest common ancestor of the components that need it. This is called "lifting state up". We will remove the local state from the TemperatureInput and move it into the Calculator instead."  
+"When you move state up, use this.state.[value] in the parent and children use this.props.[value]. Props are read-only. So, where the chilren used setState to change state before, that now has to move up. The child becomes a "controlled component", controlled by the parent."  
+
